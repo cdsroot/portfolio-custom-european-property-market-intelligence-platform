@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: european-property-intelligence
+Version: 0.1.0
+Summary: European property-market intelligence and automated valuation platform
+Requires-Python: <3.15,>=3.12
+Requires-Dist: alembic
+Requires-Dist: catboost
+Requires-Dist: duckdb
+Requires-Dist: evidently
+Requires-Dist: fastapi
+Requires-Dist: geoalchemy2
+Requires-Dist: geopandas
+Requires-Dist: httpx
+Requires-Dist: joblib
+Requires-Dist: mlflow
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pandera
+Requires-Dist: plotly
+Requires-Dist: polars
+Requires-Dist: psycopg[binary]
+Requires-Dist: pyarrow
+Requires-Dist: pydantic
+Requires-Dist: pydantic-settings
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: shap
+Requires-Dist: sqlalchemy
+Requires-Dist: streamlit
+Requires-Dist: tenacity
+Requires-Dist: uvicorn[standard]
+Provides-Extra: dev
+Requires-Dist: dvc; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: types-requests; extra == "dev"

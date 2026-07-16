@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "european-property-intelligence"
+version = "0.1.0"
+description = "European property-market intelligence and automated valuation platform"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "alembic",
+    "catboost",
+    "duckdb",
+    "evidently",
+    "fastapi",
+    "geoalchemy2",
+    "geopandas",
+    "httpx",
+    "joblib",
+    "mlflow",
+    "numpy",
+    "pandas",
+    "pandera",
+    "plotly",
+    "polars",
+    "psycopg[binary]",
+    "pyarrow",
+    "pydantic",
+    "pydantic-settings",
+    "requests",
+    "scikit-learn",
+    "shap",
+    "sqlalchemy",
+    "streamlit",
+    "tenacity",
+    "uvicorn[standard]",
+]
+
+[project.optional-dependencies]
+dev = [
+    "dvc",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+    "ruff",
+    "types-requests",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --cov=property_intelligence --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["property_intelligence"]

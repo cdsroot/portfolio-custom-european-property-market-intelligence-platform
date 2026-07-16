@@ -1,0 +1,11 @@
+dvf:
+  raw_file: data/raw/france_dvf/current.csv.gz
+  manifest_file: data/raw/france_dvf/current.csv.gz.manifest.json
+
+model:
+  iterations: 2000
+  depth: 8
+  learning_rate: 0.04
+  validation_months: 6
+  test_months: 6
+  interval_coverage: 0.90
